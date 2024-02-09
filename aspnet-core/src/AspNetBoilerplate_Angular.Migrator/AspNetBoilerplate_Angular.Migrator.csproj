@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>AspNetBoilerplate_Angular.Migrator</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>AspNetBoilerplate_Angular.Migrator</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Update="appsettings.json;log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.Castle.Log4Net" Version="9.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetBoilerplate_Angular.Core\AspNetBoilerplate_Angular.Core.csproj" />
+    <ProjectReference Include="..\AspNetBoilerplate_Angular.EntityFrameworkCore\AspNetBoilerplate_Angular.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+</Project>
